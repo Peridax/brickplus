@@ -1,6 +1,6 @@
 const options = {
   time: 10000,
-  original: { id: 101010 }
+  original: {}
 }
 
 //v1 API for the boy jefemy
@@ -20,7 +20,7 @@ chrome.notifications.onButtonClicked.addListener((id, index) => {
 })
 
 const get_latest_shop = async () => {
-  const response = await fetch(url.test)
+  const response = await fetch(url.shop)
   const shop_data = await response.json()
   return shop_data
 }
@@ -51,7 +51,9 @@ const notifier = () => {
 
           if (!latest.special && !settings.item) {
             notify = false
-          } else if (latest.special && !settings.special) {
+          }
+
+          if (latest.special && !settings.special) {
             notify = false
           }
         }).then(() => {
@@ -78,9 +80,7 @@ const notifier = () => {
         })
       }
     }
-
-    setTimeout(notifier, options.time)
-  })
+  }).then(() => { setTimeout(notifier, options.time) })
 }
 
 // Initializing notifier
