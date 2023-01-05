@@ -1,0 +1,31 @@
+{
+  "name": "Brickplus",
+  "description": "Brick-Hill item notifier made by Peridax.",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "icons": {
+    "16": "/assets/images/logo16.png",
+    "48": "/assets/images/logo48.png",
+    "128": "/assets/images/logo128.png"
+  },
+  "background": {
+    "service_worker": "assets/javascript/background.js"
+  },
+  "action": {
+    "default_title": "Brickplus",
+    "default_popup": "assets/html/popup.html",
+    "default_icon": {
+      "16": "/assets/images/logo16.png",
+      "48": "/assets/images/logo48.png",
+      "128": "/assets/images/logo128.png"
+    }
+  },
+  "host_permissions": [
+    "https://*.brick-hill.com/*"
+  ],
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage"
+  ]
+}

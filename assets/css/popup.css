@@ -1,0 +1,9 @@
+body {
+  width: 370px;
+  height: 400px;
+}
+
+/* Edited Siimple Components */
+.siimple-label {
+  padding-right: 5px;
+}
