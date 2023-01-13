@@ -2,7 +2,7 @@
   "name": "Brickplus",
   "description": "Brick-Hill item notifier made by Peridax.",
   "manifest_version": 3,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icons": {
     "16": "/assets/images/logo16.png",
     "48": "/assets/images/logo48.png",
@@ -25,7 +25,7 @@
   ],
   "permissions": [
     "notifications",
-    "tabs",
-    "storage"
+    "storage",
+    "cookies"
   ]
 }

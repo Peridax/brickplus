@@ -7,6 +7,7 @@ $(document).ready(() => {
 
     $('#opt_item').prop('checked', settings.item)
     $('#opt_special').prop('checked', settings.special)
+    $('#opt_quick_purchase').prop('checked', settings.quick_purchase)
   })
 
   $('#opt_item').change(() => {
@@ -16,6 +17,11 @@ $(document).ready(() => {
 
   $('#opt_special').change(() => {
     let new_settings = { ...global_settings, special: $('#opt_special').is(':checked') }
+    chrome.storage.local.set({ settings: new_settings }).then(() => { global_settings = new_settings })
+  })
+
+  $('#opt_quick_purchase').change(() => {
+    let new_settings = { ...global_settings, quick_purchase: $('#opt_quick_purchase').is(':checked') }
     chrome.storage.local.set({ settings: new_settings }).then(() => { global_settings = new_settings })
   })
 })
