@@ -1,6 +1,6 @@
 const options = {
   time: 10000,
-  original: { id: 1 }
+  original: {}
 }
 
 const base_settings = {
